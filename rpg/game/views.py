@@ -91,17 +91,11 @@ class DeleteObjView(View):
 class DeleteEqpView(View):
     def get(self, request):
         personaje = Personaje.objects.get(nombre=request.GET.get("per"))
-        caballo_bool = bool(request.GET.get("horse"))
-        print("*"*40)
-        print(type(caballo_bool))
-        print(caballo_bool)
+        caballo_bool = request.GET.get("horse")
         if caballo_bool == "yes":
             objeto = Caballo.objects.filter(nombre=request.GET.get("obj"), personaje=personaje)
         else:
-            print(request.GET.get("obj"))
-            print(personaje)
             objeto = Equipamiento.objects.filter(nombre=request.GET.get("obj"), personaje=personaje)
-            print(objeto)
         objeto[0].delete()
 
         return redirect('index')
