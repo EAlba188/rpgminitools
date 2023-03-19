@@ -227,4 +227,10 @@ class AccionView(View):
         return render(request, template, {"personaje": personaje, "atributo": atributo, "success": success, "level_up":level_up})
 
 
+class BattleView(View):
+    def get(self, request):
+        template = "battle.html"
+        return render(request, template, {})
+
+
 

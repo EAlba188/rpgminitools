@@ -6,15 +6,25 @@
 </head>
 <body>
 <h2>{{personaje}} utilizara {{atributo}}!</h2>
+{% load static %}
+
+
+{% if personaje.nombre == "Ignacio" %}
+<img src="{% static 'game/ignacio.png' %}">
+{% elif personaje.nombre == "Elena" %}
+<img src="{% static 'game/elena.png' %}">
+{% else %}
+<img src="{% static 'game/adriana.png' %}">
+{% endif %}
 
 {% if success %}
-<div class="texto-exito" id="texto-exito"></div>
+<div class="texto-exito" id="texto-exito" style="height:220px"></div>
 {% else %}
-<div class="texto-fracaso" id="texto-fracaso"></div>
+<div class="texto-fracaso" id="texto-fracaso" style="height:220px"></div>
 {% endif %}
 <button class="bubbly-button" onclick="cambiarEstilo()">Resolver!</button>
 {% if level_up %}
-<h2>Tu nivel {{atributo}} ha aumentado!</h2>
+<h2>Tu nivel de {{atributo}} ha aumentado!</h2>
 {% endif %}
 </body>
 </html>
@@ -52,7 +62,7 @@
       function cambiarEstilo() {
       setTimeout(() => {
         miDiv.style.backgroundColor = "green";
-        miDiv.innerHTML = '<iframe src="https://giphy.com/embed/xUOxeQaTAqYBXq5j1u" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>'
+        miDiv.innerHTML = '<iframe src="https://giphy.com/embed/xUOxeQaTAqYBXq5j1u" width="480" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>'
       }, 2000);
   }
 </script>
@@ -62,7 +72,7 @@
       function cambiarEstilo() {
       setTimeout(() => {
         miDiv.style.backgroundColor = "red";
-        miDiv.innerHTML = '<iframe src="https://giphy.com/embed/xT0xelf5NTuwuKNb0Y" width="480" height="453" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>'
+        miDiv.innerHTML = '<iframe src="https://giphy.com/embed/xT0xelf5NTuwuKNb0Y" width="480" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>'
 
       }, 2000);
   }
