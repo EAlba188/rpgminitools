@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b89d34fc-6489-4b12-9fe3-7cebd001834e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/rpg/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg/game/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/rpg/game/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg/static/game/adriana-removebg-preview.pngZone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg/static/game/elena-removebg-preview.pngZone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpg/static/game/ignacio-removebg-preview.pngZone.Identifier" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

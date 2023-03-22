@@ -133,7 +133,7 @@
 
       {% for objeto in personajes.2.objeto.all %}
       <tr>
-          <td><a href="{% url 'delete_object' %}?per=Adriana&obj={{objeto}}"><b style="color:red"> x</b></a></td>
+          <td><a href="{% url 'delete_object' %}?per=Adriana&obj={{objeto}}">{{objeto}}<b style="color:red"> x</b></a></td>
       </tr>
       {% endfor %}
       <tr>
